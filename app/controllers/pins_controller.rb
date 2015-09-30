@@ -4,6 +4,11 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
+    if params[:search]
+      @articles = Pin.search(params[:search]).order("created_at DESC")
+    else
+      @articles = Pin.order("created_at DESC")
+    end
     @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
 
@@ -38,6 +43,7 @@ class PinsController < ApplicationController
     @pin.destroy
     redirect_to pins_url
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

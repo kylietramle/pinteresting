@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                                   #ecf0f1;
+$body-bg:                                   #A8DBA8;
 $font-family-sans-serif:                		'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                             45px;
-$navbar-default-bg:                         white;
-$navbar-default-brand-color:      					#c0392b;
-$brand-primary:                             #c0392b;
+$navbar-default-bg:                         white;      					
+$brand-primary:                             #464D70;
 $jumbotron-bg:                              white;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -16,5 +16,14 @@ $jumbotron-bg:                              white;
 }
 
 .navbar-brand {
-     font-weight: bold;
+	font-weight: bold;
+	font-size: 27px;
+	font-family: 'Lato';
+	color: #464D70;
+
+}	
+
+.navbar-default {
+	border-bottom: 1px solid #666;
+	background: #FFFFFF;
 }
